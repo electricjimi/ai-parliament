@@ -76,7 +76,7 @@ Return a JSON array with objects of the form:
   "seats": <number>,
   "persona": "<persona description>"
 }}
-in the same order as given.
+in the same order as given and nothing else.
 """
     response = query_openai([
         {"role": "system", "content": "You are a helpful assistant that returns JSON if requested."},
