@@ -30,8 +30,7 @@ This project provides a simple simulation of a "mini Parliament" using the OpenA
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/yourrepo.git
-   cd yourrepo
+   git clone https://github.com/electricjimi/ai-parliament.git
    ```
 
 2. **Install Dependencies:**
