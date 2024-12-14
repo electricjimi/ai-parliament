@@ -2,6 +2,17 @@
 
 This project provides a simple simulation of a "mini Parliament" using the OpenAI API. It generates a set of parties, a group of agents (representatives), and simulates their deliberation and voting process on a given political issue. The idea is to explore how advanced language models (LLMs) can orchestrate virtual actors with different viewpoints, ideologies, and personalities.
 
+## Screenshots
+
+![Main Interface](./screenshots/main_interface.png)
+*Main interface with debate topic input*
+
+![Party Distribution](./screenshots/party_distribution.png)
+*Interactive visualization of party distribution and personas*
+
+![Voting Results](./screenshots/voting_results.png)
+*Final voting results with breakdown*
+
 ## Features
 
 - **Realistic Party Distribution:**  
@@ -44,19 +55,29 @@ This project provides a simple simulation of a "mini Parliament" using the OpenA
    ```
    or use .env file.
 
+## Run the Streamlit App
 
-4. **Run the Script:**
+4a. **Run the App:**
+```bash
+streamlit run app.py
+```
+
+The app will open automatically in your default web browser at `http://localhost:8501`
+
+## Run CLI only
+
+4b. **Run the Script:**
    ```bash
    python3 simulation.py
    ```
    
-   By default, the script will:
-   - Generate parties and their personas.
-   - Generate agent personas.
-   - Have agents express opinions on a given issue.
-   - Have a coordinator create a yes/no question.
-   - Have agents vote on the question.
-   - Print out the opinions, the question, and the votes.
+By default, the script will:
+- Generate parties and their personas.
+- Generate agent personas.
+- Have agents express opinions on a given issue.
+- Have a coordinator create a yes/no question.
+- Have agents vote on the question.
+- Print out the opinions, the question, and the votes.
 
 5. **Enabling Debug Mode:**
    If you’d like to see all prompts and responses to the OpenAI API, edit the code to set:

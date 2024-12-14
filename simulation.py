@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 # Set your OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
-DEBUG = True  # Set to True to debug all OpenAI calls
+DEBUG = False  # Set to True to debug all OpenAI calls
 
 
 def clean_json_data(json_data):
