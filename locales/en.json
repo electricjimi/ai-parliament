@@ -1,0 +1,35 @@
+{
+    "page_title": "Parliament Simulator",
+    "app_description": "This application simulates parliamentary debates and voting on various issues. Enter an issue below to see how different political parties and their representatives might respond.",
+    "api_key_prompt": "Enter your OpenAI API key:",
+    "api_key_missing": "Please enter your OpenAI API key to continue",
+    "debate_input": "What issue should we debate?",
+    "debate_placeholder": "Enter the issue to be debated...",
+    "start_button": "Start Simulation",
+    "init_simulation": "Initializing simulation...",
+    "tabs": {
+        "parties": "Parties",
+        "opinions": "Opinions",
+        "voting": "Voting Results"
+    },
+    "party_info": "Party Information",
+    "representatives": "Representatives' Opinions",
+    "agent": "Agent",
+    "voting": {
+        "results": "Voting Results",
+        "question": "Question",
+        "individual": "Individual Votes",
+        "final": "Final Result",
+        "passed": "PASSED",
+        "failed": "FAILED",
+        "yes_votes": "Yes: {} votes ({}%)",
+        "no_votes": "No: {} votes ({}%)",
+        "yes": "Yes",
+        "no": "No"
+    },
+    "charts": {
+        "party_distribution": "Parliament Seat Distribution",
+        "vote_count": "Number of Votes",
+        "vote_label": "Vote"
+    }
+}

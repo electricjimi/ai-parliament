@@ -1,0 +1,35 @@
+{
+    "page_title": "Simulatore Parlamentare",
+    "app_description": "Questa applicazione simula dibattiti e votazioni parlamentari su vari temi. Inserisci un argomento qui sotto per vedere come potrebbero rispondere i diversi partiti politici e i loro rappresentanti.",
+    "api_key_prompt": "Inserisci la tua chiave API OpenAI:",
+    "api_key_missing": "Inserisci la tua chiave API OpenAI per continuare",
+    "debate_input": "Su quale tema dovremmo dibattere?",
+    "debate_placeholder": "Inserisci il tema da dibattere...",
+    "start_button": "Avvia Simulazione",
+    "init_simulation": "Inizializzazione simulazione...",
+    "tabs": {
+        "parties": "Partiti",
+        "opinions": "Opinioni",
+        "voting": "Risultati Voto"
+    },
+    "party_info": "Informazioni sui Partiti",
+    "representatives": "Opinioni dei Rappresentanti",
+    "agent": "Agente",
+    "voting": {
+        "results": "Risultati Votazione",
+        "question": "Domanda",
+        "individual": "Voti Individuali",
+        "final": "Risultato Finale",
+        "passed": "APPROVATO",
+        "failed": "RESPINTO",
+        "yes_votes": "Sì: {} voti ({}%)",
+        "no_votes": "No: {} voti ({}%)",
+        "yes": "Sì",
+        "no": "No"
+    },
+    "charts": {
+        "party_distribution": "Distribuzione Seggi Parlamentari",
+        "vote_count": "Numero di Voti",
+        "vote_label": "Voti"
+    }
+}
