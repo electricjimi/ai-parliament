@@ -1,3 +1,5 @@
+import os
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
@@ -5,7 +7,7 @@ import plotly.express as px
 from simulation import (
     generate_party_personas, generate_agents_personas,
     get_opinions, form_question, agent_vote,
-    get_current_parliament_distribution
+    get_current_parliament_distribution, set_api_key
 )
 
 
@@ -21,6 +23,8 @@ def initialize_session_state():
         st.session_state.question = None
     if 'votes' not in st.session_state:
         st.session_state.votes = None
+    if 'api_key_set' not in st.session_state:
+        st.session_state.api_key_set = bool(os.getenv("OPENAI_API_KEY"))
 
 
 def create_party_chart(parties):
@@ -98,6 +102,15 @@ def main():
 
     # Initialize session state
     initialize_session_state()
+
+    if not st.session_state.api_key_set:
+        api_key = st.text_input("Enter your OpenAI API key:", type="password")
+        if api_key:
+            set_api_key(api_key)
+            st.session_state.api_key_set = True
+        else:
+            st.warning("Please enter your OpenAI API key to continue")
+            return
 
     # Title and description
     st.title("🏛️ Parliamentary Simulation")

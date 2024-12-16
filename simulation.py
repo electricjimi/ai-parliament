@@ -9,6 +9,22 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 DEBUG = False  # Set to True to debug all OpenAI calls
 
 
+def set_api_key(key):
+    """Set the OpenAI API key at runtime"""
+    openai.api_key = key
+
+
+def get_api_key():
+    """Get API key from environment or user input"""
+    if openai.api_key:
+        return openai.api_key
+
+    print("\nOpenAI API key not found in environment variables.")
+    key = input("Please enter your OpenAI API key: ").strip()
+    set_api_key(key)
+    return key
+
+
 def clean_json_data(json_data):
     cleaned_json_data = json_data.strip('` \n')
 
@@ -177,6 +193,8 @@ Answer only "Yes" or "No" without any additional explanation.
 
 
 def main():
+    get_api_key()
+
     issue = input("What problem should we debate about? Your answer: ")
     distribution = get_current_parliament_distribution()
     total_seats = sum(p["seats"] for p in distribution)
