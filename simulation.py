@@ -90,7 +90,7 @@ Return a JSON array with objects of the form:
 {{
   "name": "<party name>",
   "seats": <number>,
-  "persona": "<persona description>"
+  "persona": "<persona description, in the issue's original language>"
 }}
 in the same order as given and nothing else.
 """
@@ -116,7 +116,7 @@ We have {total_seats} representatives in total (sum of all seats). For each seat
 Return a JSON array with {total_seats} elements, each of the form:
 {{
   "party_name": "<party name>",
-  "agent_persona": "<short persona>"
+  "agent_persona": "<short persona, in the issue's original language>"
 }}
 
 Ensure that the number of entries for each party matches its seat count.
@@ -138,6 +138,7 @@ The issue is: {issue}.
 
 As the representative described above, in one or two sentences, express your opinion on the issue.
 Make it sound like a personal political statement reflecting both the party line and your own perspective.
+Answer in the issue's original language.
 """
         response = query_openai([
             {"role": "system", "content": system_persona},
@@ -159,7 +160,7 @@ Here are the expressed opinions from various representatives:
 {joined_opinions}
 
 Based on these opinions, propose a single yes/no question that will be put to a vote.
-Return only the question.
+Return only the question, in the issue's original language.
 """
     response = query_openai([
         {"role": "system", "content": "You are a neutral coordinator."},
