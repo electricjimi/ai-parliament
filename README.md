@@ -2,6 +2,12 @@
 
 This project provides a simple simulation of a "mini Parliament" using the OpenAI API. It generates a set of parties, a group of agents (representatives), and simulates their deliberation and voting process on a given political issue. The idea is to explore how advanced language models (LLMs) can orchestrate virtual actors with different viewpoints, ideologies, and personalities.
 
+## Try It Online
+
+You can try the app directly in your browser: [AI Parliament Demo](https://ai-parliament.streamlit.app/)
+
+Note: You'll need to provide your own OpenAI API key to use the application.
+
 ## Screenshots
 
 ![Main Interface](./screenshots/main_interface.png)
@@ -49,7 +55,7 @@ This project provides a simple simulation of a "mini Parliament" using the OpenA
    pip install -r requirements.txt
    ```
    
-3. **Set the API Key:**
+3. **Set the API Key (only if you want to use CLI mode):**
    ```bash
    export OPENAI_API_KEY=your-api-key-here
    ```
