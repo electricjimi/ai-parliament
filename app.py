@@ -95,7 +95,7 @@ def run_simulation():
 def main():
     # Page config
     st.set_page_config(
-        page_title="Parliament Simulator",
+        page_title="AI Parliament",
         page_icon="🏛️",
         layout="wide"
     )
@@ -113,7 +113,7 @@ def main():
             return
 
     # Title and description
-    st.title("🏛️ Parliamentary Simulation")
+    st.title("🏛️ AI Parliament")
     st.markdown("""
     This application simulates parliamentary debates and voting on various issues.
     Enter an issue below to see how different political parties and their representatives might respond.
